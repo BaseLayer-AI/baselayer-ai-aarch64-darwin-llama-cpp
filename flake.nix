@@ -16,12 +16,14 @@
       src = pkgs.fetchFromGitHub {
         owner = "ggml-org";
         repo = "llama.cpp";
-        tag = "v0.7.0";
-        hash = "sha256-pEDYgI3AMTU+cekvRX7NNt5wddznydQSNuerswvEpsA=";
+        tag = "v0.9.0";
+        # hash = pkgs.lib.fakeHash;
+        hash = "sha256-6LqtpfqTAbYUr/wPPBAM/dXHv3LDTg+1A81k/cFcAjY=";
       };
 
       npmRoot = "tools/ui";
-      npmDepsHash = "sha256-hqYzdp1FwPhYkBP278fQXgY9NCKB6Q3P6Gko7BfP0m0=";
+      # npmDepsHash = pkgs.lib.fakeHash;
+      npmDepsHash = "sha256-XLtEZsSFdk+2SyfXzBp8HQ2e27PQPpDCn1YjePU1/9w=";
 
       allCmakeFlags = [
         "-DGGML_METAL=ON"
@@ -51,7 +53,7 @@
       # 3. Build the derivation
       llamaCpp = pkgs.stdenv.mkDerivation {
         pname = "llama-cpp";
-        version = "0.7.0";
+        version = "0.9.0";
 
         src = src;
         
