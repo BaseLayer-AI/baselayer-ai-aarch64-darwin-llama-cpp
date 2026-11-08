@@ -1,5 +1,7 @@
 # github:BaseLayer-AI/baselayer-ai-aarch64-darwin-llama-cpp
 
+https://github.com/ggml-org/llama.cpp/releases/tag/v0.9.0
+
 ```
 nix run github:BaseLayer-AI/baselayer-ai-aarch64-darwin-llama-cpp -- cli --version
 ```
