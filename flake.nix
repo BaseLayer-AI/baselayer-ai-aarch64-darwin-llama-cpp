@@ -50,8 +50,7 @@
         hash = npmDepsHash;
       };
 
-      # 3. Build the derivation
-      llamaCpp = pkgs.stdenv.mkDerivation {
+      in pkgs.stdenv.mkDerivation {
         pname = "llama-cpp";
         version = "0.9.0";
 
@@ -96,6 +95,5 @@
           mainProgram = "llama";
         };
       };
-    in llamaCpp;
   };
 }
