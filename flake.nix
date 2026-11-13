@@ -16,14 +16,14 @@
       src = pkgs.fetchFromGitHub {
         owner = "ggml-org";
         repo = "llama.cpp";
-        tag = "v0.9.0";
+        tag = "v1.0.0";
         # hash = pkgs.lib.fakeHash;
-        hash = "sha256-6LqtpfqTAbYUr/wPPBAM/dXHv3LDTg+1A81k/cFcAjY=";
+        hash = "sha256-aYziwYzK9Zj7sopAEsrANhMGs4BO0F2g0cDCGmYLxDA=";
       };
 
       npmRoot = "tools/ui";
       # npmDepsHash = pkgs.lib.fakeHash;
-      npmDepsHash = "sha256-XLtEZsSFdk+2SyfXzBp8HQ2e27PQPpDCn1YjePU1/9w=";
+      npmDepsHash = "sha256-0OJIueUN5oD/V2NtVcXTiRW59u2tJIG3OxW8aJ8JDBY=";
 
       allCmakeFlags = [
         "-DGGML_METAL=ON"
@@ -52,7 +52,7 @@
 
       in pkgs.stdenv.mkDerivation {
         pname = "llama-cpp";
-        version = "0.9.0";
+        version = "1.0.0";
 
         src = src;
         
